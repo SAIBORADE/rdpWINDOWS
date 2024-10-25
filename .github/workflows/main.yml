@@ -11,15 +11,12 @@ jobs:
     
     steps:
       - name: Downloading & Installing Essentials
-        shell: cmd
         run: |
           curl -o Downloads.bat "https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/main/Downloads.bat"
-          Downloads.bat
+          cmd /c Downloads.bat
 
       - name: Connect to LiteManager
-        shell: cmd
-        run: show.bat
+        run: cmd /c show.bat
 
       - name: Time Counter
-        shell: cmd
-        run: loop.bat
+        run: cmd /c loop.bat
